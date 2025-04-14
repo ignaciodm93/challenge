@@ -42,7 +42,9 @@ Proyecto realizado con **Spring Boot** y **Docker**, orientado a la gestión de 
 	- En selling-costs: mvn clean compile & mvn spring-boot:run
 	- En accreditations: mvn clean compile & mvn spring-boot:run
 
-  - O correr cmd ```//c run.bat``` en el directorio padre.	
+  - O correr en el gitbash del directorio padre:
+  ```mvn clean compile ```
+  ```//c run.bat```	
 	
 
 ### Con Docker:
