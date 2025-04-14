@@ -1,0 +1,8 @@
+accreditations/target/
+*.prefs
+*.class
+*.project
+*.classpath
+selling-points/target/
+*.lst
+common/target/

@@ -1,4 +1,4 @@
-package com.challenge.ms.selling_points;
+package com.challenge.common;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -7,10 +7,10 @@ import org.springframework.boot.autoconfigure.data.redis.RedisRepositoriesAutoCo
 import org.springframework.data.mongodb.repository.config.EnableReactiveMongoRepositories;
 
 @SpringBootApplication
-@EnableReactiveMongoRepositories(basePackages = "com.challenge.ms.selling_points.repository")
 @EnableAutoConfiguration(exclude = RedisRepositoriesAutoConfiguration.class)
-public class SellingPointsApplication {
+@EnableReactiveMongoRepositories(basePackages = "com.challenge.common.repository")
+public class CommonApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(SellingPointsApplication.class, args);
+		SpringApplication.run(CommonApplication.class, args);
 	}
 }

@@ -1,18 +1,68 @@
-version: "3.9"
+version: "3.8"
+
 services:
-  challenge-image:
-    image: challenge-img
-    container_name: challenge-container
+  accreditations:
+    build:
+      context: . 
+      dockerfile: accreditations/Dockerfile
+    container_name: accreditations-service
+    ports:
+      - "8082:8082"
+    environment:
+      - SPRING_DATA_REDIS_HOST=redis
+      - SPRING_DATA_REDIS_PORT=6379
+      - SPRING_DATA_MONGODB_URI=mongodb://mongodb:27017/accreditations_db
+    networks:
+      - challenge-network
+    depends_on:
+      - redis
+      - mongodb
+
+  selling-points:
+    build:
+      context: .
+      dockerfile: selling-points/Dockerfile
+    container_name: selling-points-service
+    ports:
+      - "8081:8081"
     environment:
       - SPRING_DATA_REDIS_HOST=redis
       - SPRING_DATA_REDIS_PORT=6379
       - SPRING_DATA_MONGODB_URI=mongodb://mongodb:27017/selling_points_db
+    networks:
+      - challenge-network
+    depends_on:
+      - redis
+      - mongodb
+
+  selling-costs:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: selling-costs/Dockerfile
+    container_name: selling-costs-service
+    ports:
+      - "8083:8083"
+    environment:
+      - SPRING_DATA_REDIS_HOST=redis
+      - SPRING_DATA_REDIS_PORT=6379
+      - SPRING_DATA_MONGODB_URI=mongodb://mongodb:27017/selling_costs_db
+    networks:
+      - challenge-network
+    depends_on:
+      - redis
+      - mongodb
+
+  commons:
+    build:
+      context: .
+      dockerfile: commons/Dockerfile 
+    container_name: commons-service
     ports:
       - "8080:8080"
-      - "5005:5005"
+    environment:
+      - SPRING_DATA_REDIS_HOST=redis
+      - SPRING_DATA_REDIS_PORT=6379
+      - SPRING_DATA_MONGODB_URI=mongodb://mongodb:27017/commons_db
     networks:
       - challenge-network
     depends_on:

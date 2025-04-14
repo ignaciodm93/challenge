@@ -1,12 +1,15 @@
 package com.challenge.common.models;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class LoginRequest {
 
 	private String username;
-
 	private String password;
 
-	public LoginRequest(String username, String password) {
+	@JsonCreator
+	public LoginRequest(@JsonProperty("username") String username, @JsonProperty("password") String password) {
 		this.username = username;
 		this.password = password;
 	}
@@ -26,5 +29,4 @@ public class LoginRequest {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
 }
