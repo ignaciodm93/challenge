@@ -11,7 +11,7 @@ services:
     environment:
       - SPRING_DATA_REDIS_HOST=redis
       - SPRING_DATA_REDIS_PORT=6379
-      - SPRING_DATA_MONGODB_URI=mongodb://mongodb:27017/accreditations_db
+      - SPRING_DATA_MONGODB_URI=mongodb://mongodb:27017/selling_points_db
     networks:
       - challenge-network
     depends_on:
@@ -45,7 +45,7 @@ services:
     environment:
       - SPRING_DATA_REDIS_HOST=redis
       - SPRING_DATA_REDIS_PORT=6379
-      - SPRING_DATA_MONGODB_URI=mongodb://mongodb:27017/selling_costs_db
+      - SPRING_DATA_MONGODB_URI=mongodb://mongodb:27017/selling_points_db
     networks:
       - challenge-network
     depends_on:
@@ -62,7 +62,7 @@ services:
     environment:
       - SPRING_DATA_REDIS_HOST=redis
       - SPRING_DATA_REDIS_PORT=6379
-      - SPRING_DATA_MONGODB_URI=mongodb://mongodb:27017/commons_db
+      - SPRING_DATA_MONGODB_URI=mongodb://mongodb:27017/selling_points_db
     networks:
       - challenge-network
     depends_on:

@@ -34,15 +34,27 @@ Proyecto realizado con **Spring Boot** y **Docker**, orientado a la gestión de 
 - Tener instalados:
   - **Redis**
   - **MongoDB**
+  -	Correr:
+	```
+	- En challenge-ms-root: mvn clean compile
+	- En common: mvn clean compile & mvn spring-boot:run
+	- En selling-points: mvn clean compile & mvn spring-boot:run
+	- En selling-costs: mvn clean compile & mvn spring-boot:run
+	- En accreditations: mvn clean compile & mvn spring-boot:run
+
+  - O correr cmd ```//c run.bat``` en el directorio padre.	
+	
 
 ### Con Docker:
 
-- Tener instalado:
-  - **Docker**
+- Tener instalado y corriendo:
+  - **Docker desktop**
+  - **Consola de Ubuntu**
   
-- Correr:
+  - Correr en el directorio padre:
 
-```bash
-mvn clean compile
-mvn clean package
-docker-compose up --build
+	```bash
+	mvn clean compile
+	mvn clean package
+	docker-compose up --build
+
