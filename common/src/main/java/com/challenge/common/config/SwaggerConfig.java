@@ -36,3 +36,4 @@ public class SwaggerConfig {
 						.name(securitySchemeName).type(SecurityScheme.Type.HTTP).scheme(BEARER).bearerFormat(JWT)));
 	}
 }
+//revisar por que selling points y accreditations no figuran los parametros. Probar intetarcvambiar el orden.

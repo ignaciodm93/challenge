@@ -1,5 +1,0 @@
-com\challenge\ms\selling_points\controllers\SellingPointController.class
-com\challenge\ms\selling_points\SellingPointsApplication.class
-com\challenge\ms\selling_points\interfaces\SellingPointApi.class
-com\challenge\ms\selling_points\service\SellingPointService.class
-com\challenge\ms\selling_points\repository\SellingPointRepository.class

@@ -1,8 +1,0 @@
-com\challenge\common\models\SellingPoint.class
-com\challenge\common\models\AuthResponse.class
-com\challenge\common\models\User.class
-com\challenge\common\models\LoginRequest.class
-com\challenge\common\models\AccreditationDocument.class
-com\challenge\common\models\RegisterRequest.class
-com\challenge\common\models\Role.class
-com\challenge\common\models\SellingCost.class
